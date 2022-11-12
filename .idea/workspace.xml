@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a85a8df2-240e-4d3e-b3d8-295ec6cbf143" name="Changes" comment="" />
+    <list default="true" id="a85a8df2-240e-4d3e-b3d8-295ec6cbf143" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/chat/templates/chat/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/chat/templates/chat/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/chat/templates/chat/room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/chat/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/chat/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/chat/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/chat/templates/room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/chat/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/chat/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/chat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/chat/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/urls.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,24 +27,35 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2HS0PBDizuk8FiDpcer0cxrT00B" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;K:/Dev_/Onix/test — копия&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.gherkin.gui.PyBDDProjectConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "K:/Dev_/Onix/test — копия",
+    "settings.editor.selected.configurable": "com.jetbrains.python.gherkin.gui.PyBDDProjectConfigurable"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="K:\Dev_\Onix\test — копия\mysite\chat\templates" />
+      <recent name="K:\Dev_\Onix\test — копия\mysite\auth\templates" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration>C:\Users\Дмитрий\AppData\Roaming\Subversion</configuration>
@@ -46,11 +69,22 @@
       <updated>1668263151729</updated>
       <workItem from="1668263166557" duration="5205000" />
       <workItem from="1668268755991" duration="1045000" />
-      <workItem from="1668273260991" duration="12930000" />
+      <workItem from="1668273260991" duration="19655000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
