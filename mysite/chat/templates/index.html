@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="un-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Chat_Login</title>
+        <style>
+
+        body{
+            background-color: #121212;
+        }
+
+        h1 {
+            padding-top: 50px;
+            text-align: center;
+            font-size: 50px;
+            color: #e0e0e0;
+            font-family: "Times New Roman", Times, serif;
+        }
+        .login{
+            padding-top: 20px;
+            background-color: #f5dd5d;
+            width: 400px;
+            height: 200px;
+            margin: 100px auto 0;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 30px;
+            color: #000000;
+            font-family: "Times New Roman", Times, serif;
+        }
+        .but{
+            width: 300px;
+            height: 30px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #000000;
+            font-size: 20px;
+            color: #000000;
+            font-family: "Times New Roman", Times, serif;
+        }
+        .but:hover{
+            background-color: #000000;
+            color: #f5dd5d;
+        }
+        .small{
+            font-size: 15px;
+            color: white;
+            font-family: "Times New Roman", Times, serif;
+        }
+        .upper{
+            padding-top: 20px;
+            text-align: center;
+            font-size: 30px;
+            color: #e0e0e0;
+            font-family: "Times New Roman", Times, serif;
+        }
+        </style>
+    </head>
+    <body>
+
+    {% if request.user.is_anonymous %}
+
+        <h1>Chat Login</h1>
+    <div class = "login">
+    <form method="post" action="">
+        {% csrf_token %}
+        <label>
+            username:
+            <input type="text" name="username" placeholder="Username">
+        <br>
+        <p>
+            password:
+            <input type="password" name="password" placeholder="Password">
+        </label><br>
+
+        <p><input class= "but" type="submit" value="Submit">
+        </form>
+    </div>
+        {% else %}
+        <div class="upper">
+        {{ request.user }} is already logged in.
+        <h1> You are already logged in Chat </h1>
+        <button class="but" onclick="window.location.href='/chat'">Go to Chat</button>
+            <p><span><a class="small" href="{% url 'logout' %}" >logout</a></span>
+        </div>
+    {% endif %}
+    </body>
+</html>
+{##}
+{#    <form method="post" action="">#}
+{#        {% csrf_token %}#}
+{#        <p>{{ form.username.label }} {{ form.username }}<br>#}
+{#        <p>{{ form.password1.label }} {{ form.password1 }} {{ form.password1.errors }}<br>#}
+{#        <p> {{ form.errors}}</p>#}
+{#        <p>{{ form.password2.label }} {{ form.password2 }} {{ form.password2.errors }}<br>#}
+{##}
+{#        <p><input class= "but" type="submit" value="Submit">#}
+{#        </form>#}

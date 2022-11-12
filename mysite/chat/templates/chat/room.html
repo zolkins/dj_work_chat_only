@@ -1,0 +1,84 @@
+<!-- chat/templates/chat/room.html -->
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8"/>
+    <title>Chat Room</title>
+</head>
+<body>
+
+
+
+<div className="container">
+    <div className="row d-flex justify-content-center">
+        <div className="col-3">
+            <form>
+                <div className="form-group">
+                    <label htmlFor="exampleFormControlTextarea1" className="h4 pt-5">Chatbox</label>
+                    <textarea className="form-control" id="chat-log" readOnly rows="10"></textarea><br>
+                </div>
+                <div className="form-group">
+                    <input id="chat-message-input" className="form-control" placeholder="Enter text here" type="text"></br>
+                </div>
+                <input id="chat-message-submit" className="btn btn-primary btn-lg btn-block" type="button" value="Send">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+    {% comment %} Get data for username and chatbox name{% endcomment %}
+    {{ request.user.username|json_script:"user_username" }}
+    {{ room_name|json_script:"room-name" }}
+    <script>
+        const user_username = "{{ user.username }}";
+        const user_id = "{{ user.id }}";
+        const roomName = "{{ room_name }}";
+        console.log('user_name:',user_username,'\nuser_id: ', user_id, '\nroomName: ', roomName);
+
+        document.querySelector('#chat-message-submit').onclick = function(e) {
+            const messageInputDom = document.querySelector('#chat-message-input');
+            const message = messageInputDom.value;
+            chatSocket.send(JSON.stringify({
+                'message': message,
+                'username': user_username
+            }));
+            messageInputDom.value = '';
+        };
+
+        const chatSocket = new WebSocket(
+            'ws://'
+            + window.location.host
+            + '/ws/chat/'
+            + roomName
+            + '/'
+        );
+
+        chatSocket.onmessage = function (e) {
+            const currentdate = new Date();
+            const datetime = "\t"
+                + currentdate.getHours() + ":"
+                + currentdate.getMinutes() + " | "
+                + currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/"
+                + currentdate.getFullYear();
+          const data = JSON.parse(e.data);
+          document.querySelector('#chat-log').value += ( data.username +": " + data.message +" "+datetime +'\n');
+       }
+
+
+        chatSocket.onclose = function(e) {
+            console.error('Chat socket closed unexpectedly');
+        };
+
+        document.querySelector('#chat-message-input').focus();
+        document.querySelector('#chat-message-input').onkeyup = function(e) {
+            if (e.keyCode === 13) {  // enter, return
+                document.querySelector('#chat-message-submit').click();
+            }
+        };
+
+    </script>
+
+</body>
+</html>
